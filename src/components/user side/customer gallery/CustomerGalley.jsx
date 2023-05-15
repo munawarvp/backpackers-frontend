@@ -41,23 +41,23 @@ function CustomerGalley() {
                 <div className="gallery-img-collections">
                     <div className="galley-first-row">
                         <div className="gallery-img-container">
-                            <img className='gallery-img' src={`${BASE_URL}/${review_one.review_image}`} alt="" />
+                            <img className='gallery-img' src={`${BASE_URL}/${review_one?.review_image}`} alt="" />
                         </div>
                         <div className="gallery-img-first-row">
                             <div className="gallery-img-first-row-contain">
-                                <img className='gallery-img' src={`${BASE_URL}/${review_two.review_image}`} alt="" />
+                                <img className='gallery-img' src={`${BASE_URL}/${review_two?.review_image}`} alt="" />
                             </div>
                             <div className="gallery-img-first-row-contain">
-                                <img className='gallery-img' src={`${BASE_URL}/${review_three.review_image}`} alt="" />
+                                <img className='gallery-img' src={`${BASE_URL}/${review_three?.review_image}`} alt="" />
                             </div>
                         </div>
                     </div>
                     <div className="galley-first-row">
                         <div className="gallery-second-container">
-                            <img className='gallery-img' src={`${BASE_URL}/${review_four.review_image}`} alt="" />
+                            <img className='gallery-img' src={`${BASE_URL}/${review_four?.review_image}`} alt="" />
                         </div>
                         <div className="gallery-third-container">
-                            <img className='gallery-img' src={`${BASE_URL}/${review_five.review_image}`} alt="" />
+                            <img className='gallery-img' src={`${BASE_URL}/${review_five?.review_image}`} alt="" />
                         </div>
                     </div>
 
