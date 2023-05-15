@@ -143,18 +143,18 @@ function SingleDestination() {
             <div className="single-resort-main">
                 <div className="single-resort-img-container">
                     <div className="single-resort-first-img-container">
-                        <img className='single-resort-first-image' src={`${BASE_URL}/${SingleDestination.image_one}`} alt="" />
+                        <img className='single-resort-first-image' src={`${BASE_URL}${SingleDestination.image_one}`} alt="" />
                     </div>
 
                     <div style={{ display: "flex", flexDirection: "column" }}>
                         <div className="single-resort-rest-img-container">
-                            <img className='single-resort-remaining-image' src={`${BASE_URL}/${SingleDestination.image_two}`} alt="" />
+                            <img className='single-resort-remaining-image' src={`${BASE_URL}${SingleDestination.image_two}`} alt="" />
                         </div>
                         <div className="single-resort-rest-img-container">
-                            <img className='single-resort-remaining-image' src={`${BASE_URL}/${SingleDestination.image_three}`} alt="" />
+                            <img className='single-resort-remaining-image' src={`${BASE_URL}${SingleDestination.image_three}`} alt="" />
                         </div>
                         <div className="single-resort-rest-img-container">
-                            <img className='single-resort-remaining-image' src={`${BASE_URL}/${SingleDestination.image_one}`} alt="" />
+                            <img className='single-resort-remaining-image' src={`${BASE_URL}${SingleDestination.image_one}`} alt="" />
                         </div>
                     </div>
                 </div>

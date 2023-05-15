@@ -55,13 +55,13 @@ function ResortBookingView() {
                     <h3>Booking Details</h3>
                     <div className="booking-view-img-container">
                         <div className="single-booked-img">
-                            <img className='booked-img' src={`${BASE_URL}/${singleBooking.booked_resort && singleBooking.booked_resort.image_one}`} alt="" />
+                            <img className='booked-img' src={`${BASE_URL}${singleBooking.booked_resort && singleBooking.booked_resort.image_one}`} alt="" />
                         </div>
                         <div className="single-booked-img">
-                            <img className='booked-img' src={`${BASE_URL}/${singleBooking.booked_resort && singleBooking.booked_resort.image_two}`} alt="" />
+                            <img className='booked-img' src={`${BASE_URL}${singleBooking.booked_resort && singleBooking.booked_resort.image_two}`} alt="" />
                         </div>
                         <div className="single-booked-img">
-                            <img className='booked-img' src={`${BASE_URL}/${singleBooking.booked_resort && singleBooking.booked_resort.image_three}`} alt="" />
+                            <img className='booked-img' src={`${BASE_URL}${singleBooking.booked_resort && singleBooking.booked_resort.image_three}`} alt="" />
                         </div>
                     </div>
                     <div className="booking-view-resort-details">

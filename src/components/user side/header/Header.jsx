@@ -1,6 +1,7 @@
 import React from 'react'
 import headerImage from '../../../images/hero.png'
 import './header.css'
+import { Link } from 'react-router-dom'
 
 function Header() {
     return (
@@ -30,7 +31,7 @@ function Header() {
                             <label htmlFor="">Check-out</label>
                             <input type="date" />
                         </div>
-                        <button>Explore Now</button>
+                        <Link to={'/resorts-list'}><button className='searching-btn'>Explore Now</button></Link>
                     </div>
                 </div>
             </div>

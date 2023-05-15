@@ -71,7 +71,7 @@ function UserAdventureList() {
                     <div className="resort-listing">
                         <div className="single-resort-card">
                             <div className="resort-card-image">
-                                <img src={`${BASE_URL}/${adventure.activity_one}`} alt="" />
+                                <img src={`${BASE_URL}${adventure.activity_one}`} alt="" />
                             </div>
                             <div className="resort-card-details">
                                 <div>

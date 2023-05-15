@@ -29,7 +29,7 @@ function ResortView() {
                 <div className="view-resort-first-section">
                     <div className="first-section-left">
                         <div className="left-view-img-container">
-                            <img className='left-view-img' src={`${BASE_URL}/${singleResort.image_one}`} alt="" />
+                            <img className='left-view-img' src={`${BASE_URL}${singleResort.image_one}`} alt="" />
                         </div>
                     </div>
                     <div className="first-section-right-side">
@@ -47,16 +47,16 @@ function ResortView() {
                     <div className="second-section-img-container">
                         <div className="second-image-only-container">
                             <div className="view-resort-single-imgcontainer">
-                                <img src={`${BASE_URL}/${singleResort.image_one}`} alt="" />
+                                <img src={`${BASE_URL}${singleResort.image_one}`} alt="" />
                             </div>
                             <div className="view-resort-single-imgcontainer">
-                                <img src={`${BASE_URL}/${singleResort.image_two}`} alt="" />
+                                <img src={`${BASE_URL}${singleResort.image_two}`} alt="" />
                             </div>
                             <div className="view-resort-single-imgcontainer">
-                                <img src={`${BASE_URL}/${singleResort.image_three}`} alt="" />
+                                <img src={`${BASE_URL}${singleResort.image_three}`} alt="" />
                             </div>
                             <div className="view-resort-single-imgcontainer">
-                                <img src={`${BASE_URL}/${singleResort.image_four}`} alt="" />
+                                <img src={`${BASE_URL}${singleResort.image_four}`} alt="" />
                             </div>
                         </div>
 

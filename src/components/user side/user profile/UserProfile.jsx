@@ -141,7 +141,7 @@ function UserProfile() {
 
                     <div className="user-profile-card-contain">
                         <div className="user-profile-pic-contain">
-                            <img className='user-profile-picture' src={`${BASE_URL}/${userProfile.profile_img}`} alt="" />
+                            <img className='user-profile-picture' src={`${BASE_URL}${userProfile.profile_img}`} alt="" />
                         </div>
                         <div className="profile-details-contain">
                             <h2>{singleUser.username}</h2>
@@ -280,7 +280,7 @@ function UserProfile() {
                                     <p><b>Status :</b> {booking.status}</p>
                                 </div>
                                 <div className="booking-resort-img-contain">
-                                    <img className='booked-resort-img' src={`${BASE_URL}/${booking.booked_resort.image_one}`} alt="" />
+                                    <img className='booked-resort-img' src={`${BASE_URL}${booking.booked_resort.image_one}`} alt="" />
                                 </div>
                                 {!isCancelled && <div className='booking-cancel-btn-contain'>
                                     <CancelIcon onClick={() => handleCancel(booking.id)} style={{ fontSize: "35px", cursor: "pointer", color: "#ff4e4e" }} />

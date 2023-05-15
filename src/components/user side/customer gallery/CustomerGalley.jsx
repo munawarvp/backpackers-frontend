@@ -32,8 +32,8 @@ function CustomerGalley() {
         setReview_five(adventure_two)
         console.log(resort_review_one);
         
-
     }
+    console.log(review_one);
     return (
         <div id="recommend">
             <div className="gallery-heading-contain">
@@ -41,23 +41,23 @@ function CustomerGalley() {
                 <div className="gallery-img-collections">
                     <div className="galley-first-row">
                         <div className="gallery-img-container">
-                            <img className='gallery-img' src={`${review_one.review_image}`} alt="" />
+                            {review_one && <img className='gallery-img' src={`${BASE_URL}${review_one.review_image}`} alt="" />}
                         </div>
                         <div className="gallery-img-first-row">
                             <div className="gallery-img-first-row-contain">
-                                {review_two && <img className='gallery-img' src={`${review_two.review_image}`} alt="" />}
+                                {review_two && <img className='gallery-img' src={`${BASE_URL}${review_two.review_image}`} alt="" />}
                             </div>
                             <div className="gallery-img-first-row-contain">
-                                {review_three && <img className='gallery-img' src={`${review_three.review_image}`} alt="" />}
+                                {review_three && <img className='gallery-img' src={`${BASE_URL}${review_three.review_image}`} alt="" />}
                             </div>
                         </div>
                     </div>
                     <div className="galley-first-row">
                         <div className="gallery-second-container">
-                            {review_four && <img className='gallery-img' src={`${review_four.review_image}`} alt="" />}
+                            {review_four && <img className='gallery-img' src={`${BASE_URL}${review_four.review_image}`} alt="" />}
                         </div>
                         <div className="gallery-third-container">
-                            {review_five && <img className='gallery-img' src={`${review_five.review_image}`} alt="" />}
+                            {review_five && <img className='gallery-img' src={`${BASE_URL}${review_five.review_image}`} alt="" />}
                         </div>
                     </div>
 

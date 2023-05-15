@@ -41,7 +41,7 @@ function ViewDestination() {
                 <h2>Current Adventure</h2>
                 <div className="view-resort-head">
                     <div className="view-resort-first-img-contain">
-                        <img className='viewresort-fst-img' src={`${BASE_URL}/${singleDestination.image_one}`} alt="" />
+                        <img className='viewresort-fst-img' src={`${BASE_URL}${singleDestination.image_one}`} alt="" />
                     </div>
                     <div className="head-more-details-contain">
                         <h2 className='head-heading-font'>{singleDestination.spot_name}</h2>
@@ -89,15 +89,15 @@ function ViewDestination() {
                             {value === "two" && <div className="single-resort-img-collection">
                                 <div style={{ display: "flex", gap: "1.5rem" }}>
                                     <div className="resort-single-img-contain">
-                                        <img className='each-img-resort-view' src={`${BASE_URL}/${singleDestination.image_one}`} alt="" />
+                                        <img className='each-img-resort-view' src={`${BASE_URL}${singleDestination.image_one}`} alt="" />
                                     </div>
                                     <div className="resort-single-img-contain">
-                                        <img className='each-img-resort-view' src={`${BASE_URL}/${singleDestination.image_two}`} alt="" />
+                                        <img className='each-img-resort-view' src={`${BASE_URL}${singleDestination.image_two}`} alt="" />
                                     </div>
                                 </div>
                                 <div style={{ display: "flex", gap: "1.5rem" }}>
                                     <div className="resort-single-img-contain">
-                                        <img className='each-img-resort-view' src={`${BASE_URL}/${singleDestination.image_three}`} alt="" />
+                                        <img className='each-img-resort-view' src={`${BASE_URL}${singleDestination.image_three}`} alt="" />
                                     </div>
                                     
                                 </div>

@@ -227,15 +227,15 @@ function DestinationList() {
                         <h4>Destination Images :</h4>
                         <div className="destination-view-image-container">
                             <div className="single-destination-view-contain">
-                                <img className='view-destination-single-img' src={`${BASE_URL}/${singleDestination.image_one}`} alt="" />
+                                <img className='view-destination-single-img' src={`${BASE_URL}${singleDestination.image_one}`} alt="" />
 
                             </div>
                             <div className="single-destination-view-contain">
-                                <img className='view-destination-single-img' src={`${BASE_URL}/${singleDestination.image_two}`} alt="" />
+                                <img className='view-destination-single-img' src={`${BASE_URL}${singleDestination.image_two}`} alt="" />
 
                             </div>
                             <div className="single-destination-view-contain">
-                                {singleDestination.image_three ? <img className='view-destination-single-img' src={`${BASE_URL}/${singleDestination.image_three}`} alt="" /> : null}
+                                {singleDestination.image_three ? <img className='view-destination-single-img' src={`${BASE_URL}${singleDestination.image_three}`} alt="" /> : null}
 
                             </div>
                         </div>

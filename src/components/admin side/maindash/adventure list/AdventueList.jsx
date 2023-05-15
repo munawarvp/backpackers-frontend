@@ -222,8 +222,8 @@ function AdventueList() {
                     </div>
                     <div className="resort-images">
                         <h4>Activity Images :</h4>
-                        <img style={{ height: "9rem" }} src={`${BASE_URL}/${singleAdv.activity_one}`} alt="" />
-                        <img style={{ height: "9rem" }} src={`${BASE_URL}/${singleAdv.activity_two}`} alt="" />
+                        <img style={{ height: "9rem" }} src={`${BASE_URL}${singleAdv.activity_one}`} alt="" />
+                        <img style={{ height: "9rem" }} src={`${BASE_URL}${singleAdv.activity_two}`} alt="" />
                         {singleAdv.activity_three ? <img style={{ height: "9rem" }} src={`${BASE_URL}/${singleAdv.activity_three}`} alt="" /> : null}
 
                     </div>

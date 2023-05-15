@@ -72,7 +72,7 @@ function UserDestinationList() {
                 <div className="destination-listing">
                     {destinationList.map((destination) => (
                         <div className="single-desti-card" onClick={()=>goSingleDestination(destination.id)}>
-                            <img className='destination-card-img' src={`${BASE_URL}/${destination.image_one}`} alt="" />
+                            <img className='destination-card-img' src={`${BASE_URL}${destination.image_one}`} alt="" />
                             <div className="destination-details">
                                 <h3>{destination.spot_name}</h3>
                                 <p className='destination-place'>{destination.place}</p>

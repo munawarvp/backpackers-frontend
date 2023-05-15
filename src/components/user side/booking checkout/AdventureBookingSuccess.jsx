@@ -40,13 +40,13 @@ function AdventureBookingSuccess() {
                     <p className='summary-resort-headings'>Order Summery :</p>
                     <div className="summary-img-container">
                         <div className="summary-img-contain">
-                            <img className='summary-image' src={`${BASE_URL}/${bookingDetail.booked_activity && bookingDetail.booked_activity.activity_one}`} alt="" />
+                            <img className='summary-image' src={`${BASE_URL}${bookingDetail.booked_activity && bookingDetail.booked_activity.activity_one}`} alt="" />
                         </div>
                         <div className="summary-img-contain">
-                            <img className='summary-image' src={`${BASE_URL}/${bookingDetail.booked_activity && bookingDetail.booked_activity.activity_two}`} alt="" />
+                            <img className='summary-image' src={`${BASE_URL}${bookingDetail.booked_activity && bookingDetail.booked_activity.activity_two}`} alt="" />
                         </div>
                         <div className="summary-img-contain">
-                            <img className='summary-image' src={`${BASE_URL}/${bookingDetail.booked_activity && bookingDetail.booked_activity.activity_three}`} alt="" />
+                            <img className='summary-image' src={`${BASE_URL}${bookingDetail.booked_activity && bookingDetail.booked_activity.activity_three}`} alt="" />
                         </div>
 
 

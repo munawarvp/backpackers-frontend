@@ -81,7 +81,7 @@ function SingleResort() {
         setSingleResort(response.data)
         setSimilarResort(similar_response.data)
     }
-
+    
     async function locations() {
         const response = await axios.get(`${BASE_URL}/resorts/locations/`)
         setLocationlist(response.data)
@@ -227,18 +227,18 @@ function SingleResort() {
             <div className="single-resort-main">
                 <div className="single-resort-img-container">
                     <div className="single-resort-first-img-container">
-                        <img className='single-resort-first-image' src={`${BASE_URL}/${singleResort.image_one}`} alt="" />
+                        <img className='single-resort-first-image' src={`${BASE_URL}${singleResort.image_one}`} alt="" />
                     </div>
 
                     <div style={{ display: "flex", flexDirection: "column" }}>
                         <div className="single-resort-rest-img-container">
-                            <img className='single-resort-remaining-image' src={`${BASE_URL}/${singleResort.image_two}`} alt="" />
+                            <img className='single-resort-remaining-image' src={`${BASE_URL}${singleResort.image_two}`} alt="" />
                         </div>
                         <div className="single-resort-rest-img-container">
-                            <img className='single-resort-remaining-image' src={`${BASE_URL}/${singleResort.image_three}`} alt="" />
+                            <img className='single-resort-remaining-image' src={`${BASE_URL}${singleResort.image_three}`} alt="" />
                         </div>
                         <div className="single-resort-rest-img-container">
-                            <img className='single-resort-remaining-image' src={`${BASE_URL}/${singleResort.image_four}`} alt="" />
+                            <img className='single-resort-remaining-image' src={`${BASE_URL}${singleResort.image_four}`} alt="" />
                         </div>
                     </div>
                 </div>
@@ -389,7 +389,7 @@ function SingleResort() {
                                         </div>
 
                                         {review.review_image && <div className="resort-review-single-img">
-                                            <img className='review-single-img' src={`${BASE_URL}/${review.review_image}`} alt="" />
+                                            <img className='review-single-img' src={`${BASE_URL}${review.review_image}`} alt="" />
                                         </div>}
                                     </div>
                                 </div>
@@ -447,7 +447,7 @@ function SingleResort() {
                             {similarResorts.map((similar) => (
                                 <div className="similar-stay-card">
                                     <div className="similar-resort-img-container">
-                                        <img src={`${BASE_URL}/${similar.image_two}`} alt="" />
+                                        <img src={`${BASE_URL}${similar.image_two}`} alt="" />
                                     </div>
                                     <div className="similar-stays-details">
                                         <h3>{similar.resort_name}</h3>

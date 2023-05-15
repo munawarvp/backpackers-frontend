@@ -318,7 +318,7 @@ function AdventureCheckout() {
                     <div className="details-container">
                         <div className="booking-details-card">
                             <div className="booking-img-container">
-                                <img className='booking-resort-img' src={`${BASE_URL}/${singleAdventure.activity_one}`} alt="" />
+                                <img className='booking-resort-img' src={`${BASE_URL}${singleAdventure.activity_one}`} alt="" />
                             </div>
                             <div className="booking-details-name">
                                 <h3>{singleAdventure.activity_name}</h3>

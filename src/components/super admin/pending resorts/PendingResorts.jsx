@@ -65,7 +65,7 @@ function PendingResorts() {
             {pendingResort.map((item)=>(<>
                 <div className="resort-card" onClick={()=>handleClick(item.id)}>
                     <div>
-                        <img style={{height:"100px"}} src={`${BASE_URL}/${item.image_one}`} alt="" />
+                        <img style={{height:"100px"}} src={`${BASE_URL}${item.image_one}`} alt="" />
                     </div>
                     <div>
                         <p><b>Resort : </b>{item.resort_name}</p>
@@ -97,8 +97,8 @@ function PendingResorts() {
                                     <p><b>Phone : </b>{singleResort.phone_number}</p>
                                     <div className="resort-images">
                                         <h4>Resort Images :</h4>
-                                        <img src={`${BASE_URL}/${singleResort.image_one}`} alt="" />
-                                        <img src={`${BASE_URL}/${singleResort.image_two}`} alt="" />
+                                        <img src={`${BASE_URL}${singleResort.image_one}`} alt="" />
+                                        <img src={`${BASE_URL}${singleResort.image_two}`} alt="" />
                                         {item.image_three ? <img src={`${BASE_URL}/${singleResort.image_three}`} alt="" /> : null}
                                         {item.image_four ? <img src={`${BASE_URL}/${singleResort.image_four}`} alt="" /> : null}
                                     </div>

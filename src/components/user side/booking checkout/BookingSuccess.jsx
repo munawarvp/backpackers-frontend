@@ -96,10 +96,10 @@ function BookingSuccess() {
                     <p className='summary-resort-name'>{bookingDetail.booked_resort && bookingDetail.booked_resort.resort_name}</p>
                     <div className="summary-img-container">
                         <div className="summary-img-contain">
-                            <img className='summary-image' src={`${BASE_URL}/${bookingDetail.booked_resort && bookingDetail.booked_resort.image_one}`} alt="" />
+                            <img className='summary-image' src={`${BASE_URL}${bookingDetail.booked_resort && bookingDetail.booked_resort.image_one}`} alt="" />
                         </div>
                         <div className="summary-img-contain">
-                            <img className='summary-image' src={`${BASE_URL}/${bookingDetail.booked_resort && bookingDetail.booked_resort.image_two}`} alt="" />
+                            <img className='summary-image' src={`${BASE_URL}${bookingDetail.booked_resort && bookingDetail.booked_resort.image_two}`} alt="" />
                         </div>
                     </div>
 

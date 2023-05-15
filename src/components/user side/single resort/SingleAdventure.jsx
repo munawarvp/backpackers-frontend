@@ -140,20 +140,20 @@ function SingleAdventure() {
             <div className="single-resort-main">
                 <div className="single-resort-img-container">
                     <div className="single-resort-first-img-container">
-                        <img className='single-resort-first-image' src={`${BASE_URL}/${SingleAdventure.activity_one}`} alt="" />
+                        <img className='single-resort-first-image' src={`${BASE_URL}${SingleAdventure.activity_one}`} alt="" />
                     </div>
 
                     <div style={{ display: "flex", flexDirection: "column" }}>
                         <div className="single-resort-rest-img-container">
-                            <img className='single-resort-remaining-image' src={`${BASE_URL}/${SingleAdventure.activity_two}`} alt="" />
+                            <img className='single-resort-remaining-image' src={`${BASE_URL}${SingleAdventure.activity_two}`} alt="" />
 
                         </div>
                         <div className="single-resort-rest-img-container">
-                            <img className='single-resort-remaining-image' src={`${BASE_URL}/${SingleAdventure.activity_three}`} alt="" />
+                            <img className='single-resort-remaining-image' src={`${BASE_URL}${SingleAdventure.activity_three}`} alt="" />
 
                         </div>
                         <div className="single-resort-rest-img-container">
-                            <img className='single-resort-remaining-image' src={`${BASE_URL}/${SingleAdventure.activity_one}`} alt="" />
+                            <img className='single-resort-remaining-image' src={`${BASE_URL}${SingleAdventure.activity_one}`} alt="" />
 
                         </div>
                     </div>
@@ -245,7 +245,7 @@ function SingleAdventure() {
                                     </div>
                                     <div className="resort-review-img-contain">
                                         <div className="resort-review-single-img">
-                                            <img className='review-single-img' src={`${BASE_URL}/${review.review_image}`} alt="" />
+                                            <img className='review-single-img' src={`${BASE_URL}${review.review_image}`} alt="" />
                                         </div>
                                     </div>
                                 </div>
