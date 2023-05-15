@@ -1,0 +1,72 @@
+
+.checks{
+    display: flex;
+}
+.select-field{
+    width: 300px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+.pool{
+    height: 31px;
+}
+
+
+.two-input-row{
+    display: flex;
+    
+}
+.location-select{
+    display: flex;
+}
+.add-resort-map-container{
+    width: 70%;
+    height: 22rem;
+    margin-bottom: 30px;
+}
+.text-area-in-row{
+    display: flex;
+    flex-direction: column;
+}
+.textarea-address{
+    width: 35rem;
+    height: 100px;
+}
+/* .main-form-container{
+    margin: auto;
+} */
+.form-container{
+    padding: 0.5rem 1.5rem;
+}
+.input-needed{
+    width: 24rem;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.803);
+    border: 1px solid rgb(232, 232, 232);
+    border-bottom: 3px solid #FF919D;
+    margin-bottom: 13px;
+    margin-right: 1rem;
+}
+.resort-add-btn{
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: #FF919D;
+    margin-top: 1.6rem;
+    margin-right: 2rem;
+}
+.resort-delete-btn{
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: crimson;
+    margin-top: 1.6rem;
+    margin-right: 2rem;
+}

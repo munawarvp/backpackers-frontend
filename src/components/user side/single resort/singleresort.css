@@ -1,0 +1,372 @@
+.breadcremps{
+    display: flex;
+    gap: 1rem;
+    margin-top: 10px;
+    margin-left: 9rem;
+}
+.link{
+    color: black;
+}
+
+.single-resort-img-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.single-resort-first-img-container{
+    width: 50rem;
+    height: 30rem;
+}
+.single-resort-first-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.single-resort-rest-img-container{
+    width: 16rem;
+    height: 9.5rem;
+    margin-bottom: .7rem;
+}
+.single-resort-remaining-image{
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+}
+.single-resort-heading{
+    width: 60%;
+}
+.single-heading-container{
+    display: flex;
+    justify-content: center;
+}
+.single-resort-place{
+    font-weight: bold;
+    color: #15406e;
+    margin-bottom: 10px;
+}
+.single-resort-about{
+    font-size: 14px;
+}
+.single-resort-heading>h3,h2,p{
+    margin: 0;
+
+}
+.single-resort-price{
+    color: #15406e;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.availability-btn{
+    border: none;
+    border-radius: 3px;
+    height: 2.5rem;
+    width: 9rem;
+    background-color: #4361ee;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.book-now-btn{
+    border: none;
+    border-radius: 3px;
+    height: 2.5rem;
+    width: 8rem;
+    background-color: #4361ee;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+.resort-subheading-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.resort-subheading{
+    /* border-bottom: 3.5px solid #15406e; */
+    width: 68%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-sub-heading{
+    text-align: center;
+    border-bottom: 3.5px solid #15406e;
+    width: 15%;
+}
+.nav-sub-heading:hover{
+    border-bottom: 3.5px solid #4361ee;
+    color: #15406e;
+}
+.resort-overview-container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 20px;
+    
+}
+.overview-shadow{
+    width: 75%;
+    border-radius: 7px;
+    padding: 20px;
+    box-shadow: #828caf51 0 0 15px 10px;
+}
+.resort-overview{
+    width: 90%;
+}
+.resort-overview-details{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.resort-overview-place{
+    margin-bottom: 10px;
+}
+.resort-room-type{
+    width: 90%;
+    margin-top: 20px;
+}
+
+.resort-map-location{
+    width: 75%;
+    padding: 20px;
+    border-radius: 7px;
+    box-shadow: #828caf51 0 0 15px 10px;
+}
+
+/* review */
+.resort-review-main-contain{
+    width: 75%;
+    padding: 20px;
+    border-radius: 7px;
+    box-shadow: #828caf51 0 0 15px 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.resort-review-heading{
+    width: 100%;
+}
+.profile-img-name-rating{
+    display: flex;
+    align-items: center;
+}
+.resort-single-review-contain{
+    width: 96%;
+    padding: 10px 20px;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+    /* border: 1px solid gray; */
+    box-shadow: #4362ee79 0 0 8px 1px;
+    border-radius: 10px;
+}
+.review-single-inside{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.review-profile-img-container{
+    width: 45px;
+    height: 45px;
+}
+.review-user-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.review-name-rating{
+    margin-left: 15px;
+}
+.resort-review-description{
+    width: 80%;
+}
+.resort-review-img-contain{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.delete-review-contain{
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: #acacacd7 0 0 8px 1px;
+    cursor: pointer;
+}
+.delete-review-contain:hover{
+    box-shadow: #8b8b8bd7 0 0 8px 1px;
+}
+.resort-review-single-img{
+    width: 8rem;
+    height: 4.8rem;
+}
+.resort-review-single-img>p{
+    font-size: 15px;
+    margin-bottom: 3px;
+    color: rgb(109, 109, 109);
+}
+.review-single-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.review-form-main-container{
+    width: 99%;
+    margin-top: 17px;
+    
+    
+    
+}
+.review-form-half{
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: #4362ee79 0 0 8px 1px;
+}
+
+.review-input-contain{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.review-add-input{
+    border: none;
+    width: 90%;
+    height: 40px;
+    margin-top: 5px;
+    box-shadow: #74747479 0 0 8px 1px;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+.review-rating-img-contain{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.review-textarea{
+    height: 6rem;
+}
+
+.add-review-btn{
+    height: 37px;
+    width: 50%;
+    border: none;
+    color: white;
+    background-color: #4361ee;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.check-availability-popup{
+    height: 50vh;
+    width: 60%;
+    padding: 1.2rem 1.2rem;
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #71717194;
+    background-color: #ebebeb;
+    z-index: 1;
+
+}
+/* .booking-checkout-input-container{
+    margin-top: 1rem;
+} */
+.check-availability-input-contain{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.checkavailability-input-container{
+    width: 65%;
+    margin-bottom: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.checkavailability-btn{
+    width: 25%;
+    height: 2.5rem;
+    border: none;
+    background-color: #15406e;
+    color: white;
+    font-size: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.checkavailability-btn:hover{
+    background-color: #195392;
+}
+.check-availability-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.resort-available-container{
+    text-align: center;
+    margin-top: 20px;
+    width: 15%;
+    padding: 5px;
+    border-radius: 6px;
+    background-color: green;
+    color: white;
+}
+.resort-notavailable-container{
+    text-align: center;
+    margin-top: 20px;
+    width: 20%;
+    padding: 5px;
+    border-radius: 6px;
+    background-color: red;
+    color: white;
+}
+
+.similar-stays-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.similar-stay-card{
+    /* padding: 15px 20px; */
+    width: 24%;
+    height: 20rem;
+    background-color: #dbdbdb;
+    box-shadow: #7474745b 0 0 2px 1px;
+    border-radius: 20px;
+}
+.similar-resort-img-container{
+    width: 100%;
+    height: 9rem;
+}
+.similar-resort-img-container>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+.similar-stays-details{
+    width: 100%;
+    padding: 5px 10px;
+}
+.similar-stays-details>h3{
+    color: #15406e;
+}
+.similar-stays-details>h4{
+    color: #4361ee;
+}

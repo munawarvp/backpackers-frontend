@@ -1,0 +1,132 @@
+.adventure-panel{
+    background: linear-gradient(
+        106.37deg,
+        #fff3d1 29.63%,
+        /* #ddd2b4 29.63%, */
+        /* #ffcfd1 51.55%, */
+        #7df9fb 90.85%
+    );
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+.adventure-glass{
+    display: grid;
+    /* height: 97%; */
+    width: 97%;
+    border-radius: 2rem;
+    background-color: var(--glass);
+    overflow: hidden;
+    grid-template-columns: 13rem auto 12rem;
+    gap: 10px;
+}
+.pop-update-adv{
+    height: 70vh;
+    width: 60%;
+    padding: 1.2rem 1.2rem;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #71717156;
+    background-color: #ffffff;
+
+}
+
+
+.add-adv-form{
+    margin-top: 1.5rem;
+}
+
+.add-activity-row{
+    display: flex;
+}
+.add-activity-input{
+    width: 20rem;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.803);
+    border: 1px solid rgb(232, 232, 232);
+    border-bottom: 3px solid #FF919D;
+    margin-right: 1rem;
+}
+
+.add-activity-price-input{
+    width: 10rem;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.803);
+    border: 1px solid rgb(232, 232, 232);
+    border-bottom: 3px solid #FF919D;
+    margin-right: 1rem;
+}
+
+.activity-add-btn{
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: #FF919D;
+    margin-top: 1.6rem;
+    margin-right: 3rem;
+}
+
+.form-errors{
+    color: red;
+    font-size: 13px;
+}
+
+.booking-view-panel{
+    background: linear-gradient(
+        106.37deg,
+        #fff3d1 29.63%,
+        /* #ddd2b4 29.63%, */
+        /* #ffcfd1 51.55%, */
+        #7df9fb 90.85%
+    );
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+.booking-view-glass{
+    display: grid;
+    /* height: 97%; */
+    width: 97%;
+    border-radius: 2rem;
+    background-color: var(--glass);
+    overflow: hidden;
+    grid-template-columns: 13rem auto 2rem;
+    gap: 10px;
+}
+
+.resort-view-panel{
+    background: linear-gradient(
+        106.37deg,
+        #fff3d1 29.63%,
+        /* #ddd2b4 29.63%, */
+        /* #ffcfd1 51.55%, */
+        #7df9fb 90.85%
+    );
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding-bottom: 1.5rem;
+}
+
+.resort-view-glass{
+    display: grid;
+    /* height: 97%; */
+    width: 97%;
+    border-radius: 2rem;
+    background-color: var(--glass);
+    /* overflow: hidden; */
+    grid-template-columns: 13rem auto 2rem;
+    gap: 10px;
+}
