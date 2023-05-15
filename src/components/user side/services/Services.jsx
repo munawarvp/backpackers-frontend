@@ -104,7 +104,7 @@ function Services() {
                             <Link to={`/resort-details/${destination.id}`}>
                             <div className="destination">
                                 <div className="resort-img-container">
-                                    <img className='home-resort-img' src={`${BASE_URL}/${destination.image_one}`} alt="" />
+                                    <img className='home-resort-img' src={`${destination.image_one}`} alt="" />
                                 </div>
                                 
                                 <h3>{destination.resort_name}</h3>
@@ -137,7 +137,7 @@ function Services() {
                             <Link to={`/adventure-details/${destination.id}`}>
                             <div className="destination">
                                 <div className="resort-img-container">
-                                    <img className='home-resort-img' src={`${BASE_URL}/${destination.activity_one}`} alt="" />
+                                    <img className='home-resort-img' src={`${destination.activity_one}`} alt="" />
                                 </div>
                                 
                                 <h3>{destination.activity_name}</h3>
@@ -169,7 +169,7 @@ function Services() {
                         return (
                             <div className="destination">
                                 <div className="resort-img-container">
-                                    <img className='home-resort-img' src={`${BASE_URL}/${destination.image_one}`} alt="" />
+                                    <img className='home-resort-img' src={`${destination.image_one}`} alt="" />
                                 </div>
                                 
                                 <h3>{destination.spot_name}</h3>
