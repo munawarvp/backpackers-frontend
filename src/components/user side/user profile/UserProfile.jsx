@@ -304,7 +304,7 @@ function UserProfile() {
                                     <p><b>Total Amount :</b> {booking.booking_total}</p>
                                 </div>
                                 <div className="booking-resort-img-contain">
-                                    <img className='booked-resort-img' src={`${BASE_URL}/${booking.booked_activity.activity_one}`} alt="" />
+                                    <img className='booked-resort-img' src={`${BASE_URL}${booking.booked_activity.activity_one}`} alt="" />
                                 </div>
                             </div>
                         ))}

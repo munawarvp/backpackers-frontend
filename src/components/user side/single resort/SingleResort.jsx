@@ -26,7 +26,7 @@ import jwtDecode from 'jwt-decode'
 import { useFormik } from 'formik'
 
 import Profile from '../../../images/img3.png'
-import Background from '../../../images/travelling.jpg'
+import mapboxgl from 'mapbox-gl';
 
 import axios from 'axios';
 import { BASE_URL } from '../../../utils/config';
@@ -68,6 +68,7 @@ function SingleResort() {
         accessToken: mapbox_access_token
     });
 
+
     const resort_id = useParams()
     dispatch(updateResortId(resort_id.id))
 
@@ -81,7 +82,7 @@ function SingleResort() {
         setSingleResort(response.data)
         setSimilarResort(similar_response.data)
     }
-    
+
     async function locations() {
         const response = await axios.get(`${BASE_URL}/resorts/locations/`)
         setLocationlist(response.data)
@@ -171,8 +172,9 @@ function SingleResort() {
         data['checking_resort'] = singleResort.id
         console.log(data);
         const date = JSON.stringify(data)
-        console.log(typeof (date));
+        console.log(date);
         const response = await axios.get(`${BASE_URL}/bookings/checkresortavailability/${date}`)
+        console.log(response);
 
         if (response.data.msg === 200) {
             setNotAvailable(false)
@@ -191,6 +193,9 @@ function SingleResort() {
         setNotAvailable(false)
         setAvailable(false)
     }
+
+    console.log(reviews[0] && reviews[0].user);
+    console.log(user_id);
     return (
         <div className="user-resortlist-main">
             <Toaster position='top-center' reverseOrder='false' ></Toaster>
@@ -333,7 +338,7 @@ function SingleResort() {
 
 
 
-                    {value === 1 && singleResort.map_location && <div className="resort-map-location">
+                    {value === 1 && singleResort.map_location && <div  className="resort-map-location" id='map'>
                         <p style={{ fontWeight: "bold" }} className="resort-overview-place">Location :</p>
                         <Map
                             style="mapbox://styles/mapbox/streets-v9"
@@ -384,9 +389,9 @@ function SingleResort() {
                                         </div>
                                     </div>
                                     <div className="resort-review-img-contain">
-                                        <div onClick={() => deleteReview(review.id)} className="delete-review-contain">
+                                        {review.user.id === user_id && <div onClick={() => deleteReview(review.id)} className="delete-review-contain">
                                             <DeleteIcon />
-                                        </div>
+                                        </div>}
 
                                         {review.review_image && <div className="resort-review-single-img">
                                             <img className='review-single-img' src={`${BASE_URL}${review.review_image}`} alt="" />

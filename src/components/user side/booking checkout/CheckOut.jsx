@@ -352,7 +352,7 @@ function CheckOut() {
               <div className="booking-coupon-list-contain">
                 {coupons.map((item) => (<div className="single-booking-coupon">
                   <h3>{item.coupon.code}</h3>
-                  {Applied ?
+                  {Applied === item.coupon.id ?
                     <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
                       <p className='coupon-applied-text'>Applied</p>
                       <AiOutlineCloseCircle style={{ cursor: "pointer" }} size={23} onClick={() => cancelCouponApply(item.coupon.discount_amount)} />
