@@ -34,9 +34,9 @@ function Sidebar() {
     >
         <UilBars/>
     </div>
-    <div className='Sidebar'
-        variants={sidebarVariants}
-        animate={window.innerWidth<=768?`${expanded}` : ''}
+    {expanded && <div className='Sidebar'
+        // variants={sidebarVariants}
+        // animate={window.innerWidth<=768?`${expanded}` : ''}
     >
         {/* logo */}
         <div className="logo">
@@ -62,7 +62,7 @@ function Sidebar() {
                 <span>Logout</span>
             </div>
         </div>
-    </div>
+    </div>}
     </>
   )
 }

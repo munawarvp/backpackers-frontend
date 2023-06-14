@@ -44,6 +44,7 @@ import SingleDestinationPage from './pages/user side/SingleDestinationPage';
 import UserProfilePage from './pages/user side/UserProfilePage';
 import CouponsPage from './pages/super admin/CouponsPage';
 import PageNotFound from './pages/user side/PageNotFound';
+import Sample from './components/Sample';
 
 
 

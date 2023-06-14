@@ -1,4 +1,4 @@
-.header-div{
+.super-div{
     margin: 0 5px;
     /* padding: 10px; */
     padding: 0 30px;
@@ -17,6 +17,7 @@
     /* background-color: #f0d5c8; */
     border-bottom: 4px solid #3da2e6;
     border-radius: 0  0 30px 30px;
+    height: 5rem;
 }
 .user-search{
     height: 32px;

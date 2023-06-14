@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Select from 'react-select';
 import { Button } from 'antd';
 import { AiOutlineSearch, AiFillStar } from 'react-icons/ai'
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { BiWifiOff } from 'react-icons/bi'
 import { BsWifi } from 'react-icons/bs'
 import { MdPool } from 'react-icons/md'
@@ -52,11 +52,13 @@ function SingleResort() {
     const [available, setAvailable] = useState(false)
     const [notAvailable, setNotAvailable] = useState(false)
 
-    const dispatch = useDispatch()
+
     const history = useNavigate()
     const location = useLocation()
+    const resort_id = useParams()
 
     const { register, handleSubmit, setValue, watch } = useForm();
+
 
     useEffect(() => {
         locations();
@@ -69,14 +71,13 @@ function SingleResort() {
     });
 
 
-    const resort_id = useParams()
-    dispatch(updateResortId(resort_id.id))
 
     // console.log(typeof (singleResort.map_location));
     // console.log(singleResort.map_location ? singleResort.map_location.split(',') : null);
     const [lat, lng] = singleResort.map_location ? singleResort.map_location.split(',') : []
 
     async function getResort() {
+        
         const response = await axios.get(`${BASE_URL}/resorts/singleresortpage/${resort_id.id}`)
         const similar_response = await axios.get(`${BASE_URL}/resorts/similarstays/${resort_id.id}`)
         setSingleResort(response.data)
@@ -89,6 +90,7 @@ function SingleResort() {
     }
 
     async function getReviews() {
+        
         const response = await axios.get(`${BASE_URL}/bookings/getresortreview/${resort_id.id}`)
         setReviews(response.data)
     }
@@ -116,7 +118,7 @@ function SingleResort() {
         user_id = decoded.user_id
 
     }
-
+    
     const formik = useFormik({
         initialValues: {
             user: user_id,
@@ -194,35 +196,16 @@ function SingleResort() {
         setAvailable(false)
     }
 
-    console.log(reviews[0] && reviews[0].user);
-    console.log(user_id);
+    const tosimilarResorts = (id) => {
+        console.log(id);
+        history(`/resort-details/${id}`)
+        getResort();
+    }
+
     return (
         <div className="user-resortlist-main">
             <Toaster position='top-center' reverseOrder='false' ></Toaster>
-            <div className="resort-search-filter">
-                <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
-                    <div>
-                        <label htmlFor="location">Locations</label>
-                        <Select className='drop-locations' options={loctions} value={loctions[0]} />
-                    </div>
-                    <div style={{ display: "flex", flexDirection: "column" }}>
-                        <label htmlFor="first_name">Check In</label>
-                        <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <DatePicker label="Check I" name='check_out' />
-                        </LocalizationProvider>
-                    </div>
-                    <div style={{ display: "flex", flexDirection: "column" }}>
-                        <label htmlFor="first_name">Check Out</label>
-                        <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <DatePicker label="Check Out" name='check_out' />
-                        </LocalizationProvider>
-                    </div>
-                    <Button type="primary" icon={<AiOutlineSearch />}>Search</Button>
-                </div>
-                <div className="total-count-resort">
-                    <h3>Total number of resorts : 20</h3>
-                </div>
-            </div>
+            
             <div className="breadcremps">
                 <p>Home {'>'}</p>
                 <p>Resorts {'>'}</p>
@@ -450,18 +433,20 @@ function SingleResort() {
                     {value === 3 && <div className="resort-review-main-contain">
                         <div className="similar-stays-container">
                             {similarResorts.map((similar) => (
-                                <div className="similar-stay-card">
-                                    <div className="similar-resort-img-container">
-                                        <img src={`${BASE_URL}${similar.image_two}`} alt="" />
+                                // <Link to={`/resort-details/${similar.id}`}>
+                                    <div onClick={()=>tosimilarResorts(similar.id)} className="similar-stay-card">
+                                        <div className="similar-resort-img-container">
+                                            <img src={`${BASE_URL}${similar.image_two}`} alt="" />
+                                        </div>
+                                        <div className="similar-stays-details">
+                                            <h3>{similar.resort_name}</h3>
+                                            <AiFillStar color='yellow' /><AiFillStar color='yellow' /><AiFillStar color='yellow' />
+                                            <h4>{similar.place}</h4>
+                                            <p>{similar.owner.first_name}</p>
+                                            <p>{similar.phone_number}</p>
+                                        </div>
                                     </div>
-                                    <div className="similar-stays-details">
-                                        <h3>{similar.resort_name}</h3>
-                                        <AiFillStar color='yellow' /><AiFillStar color='yellow' /><AiFillStar color='yellow' />
-                                        <h4>{similar.place}</h4>
-                                        <p>{similar.owner.first_name}</p>
-                                        <p>{similar.phone_number}</p>
-                                    </div>
-                                </div>
+                                // </Link>
                             ))}
                         </div>
                     </div>}

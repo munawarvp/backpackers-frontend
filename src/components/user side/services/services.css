@@ -57,6 +57,10 @@
     align-items: center;
     gap: 3rem;
     padding: 0 3rem;
+    overflow: scroll;
+}
+::-webkit-scrollbar{
+    width: 0.5em;
 }
 .destination {
     padding: 0.8rem;

@@ -12,7 +12,7 @@ function MainDash() {
   return (
     <div className="MainDash">
       <div className="headings">
-        <h1>Dashboard</h1>
+        <h1 className='font-extrabold text-2xl mt-5'>Dashboard</h1>
         <h3>{decoded.username}</h3>
       </div>
       <Cards/>

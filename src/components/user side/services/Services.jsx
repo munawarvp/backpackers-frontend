@@ -167,6 +167,7 @@ function Services() {
                 <div className="destinations">
                     {destinationList.map((destination) => {
                         return (
+                            <Link to={`/destination-details/${destination.id}`}>
                             <div className="destination">
                                 <div className="resort-img-container">
                                     <img className='home-resort-img' src={`${BASE_URL}${destination.image_one}`} alt="" />
@@ -187,6 +188,7 @@ function Services() {
                                     
                                 </div>
                             </div>
+                            </Link>
                         );
                     })}
                 </div>

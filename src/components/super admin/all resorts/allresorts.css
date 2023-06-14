@@ -1,6 +1,6 @@
 .table-div{
     margin: 0 50px;
-    width: 74%;
+    width: 85%;
 }
 /* .align-table{
     height: 100%;
@@ -18,6 +18,7 @@
 #customers td, #customers th {
   border: 1px solid #ddd;
   padding: 10px;
+  height: 24px;
 }
 /* .all-resort-table-td{
   padding: 0 10px;
@@ -38,6 +39,7 @@
   text-align: left;
   background-color: #558499;
   color: white;
+  
 }
 .action-col{
   width: 130px;

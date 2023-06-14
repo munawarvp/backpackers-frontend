@@ -93,6 +93,9 @@ function AdventueList() {
             form.append('activity_three', formik.values.activity_three)
 
             const response = await axios.post(`${BASE_URL}/resorts/stafflistadventure/`, form)
+            form.forEach((value, key) => {
+                console.log(value, key);
+            })
             if (response.data.msg === 200) {
                 toast.success('Added Sucessfully')
             } else {

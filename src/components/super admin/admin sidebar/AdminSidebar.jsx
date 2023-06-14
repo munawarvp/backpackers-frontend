@@ -19,17 +19,17 @@ function AdminSidebar() {
   return (
     <div className='main-sidebar'>
         <div className='top-items'>
-            <Link to='/admin-dashboard'><p  className='sidebar-items-top'><AiOutlineHome size={25} className='icons'/> Dashboard</p></Link>
-            <Link to='/admin/resorts' ><p className='sidebar-items-top'><HotelIcon size={25} className='icons'/> All Resorts</p></Link>
-            <Link to='/admin/pendings'><p className='sidebar-items-top'><BiNote size={25} className='icons'/> Pending Requests</p></Link>
-            <Link to='/admin/manage-staff'><p className='sidebar-items-top'><BsPersonFillAdd size={25} className='icons'/>Manage Staffs</p></Link>
-            <Link to='/admin/adventures'><p className='sidebar-items-top'><FaHiking size={25} className='icons'/>Adventures</p></Link>
-            <Link to='/admin/destinations' ><p className='sidebar-items-top'><FaLocationArrow size={20} className='icons'/> Destinations</p></Link>
-            <Link to='/admin/bookings' ><p className='sidebar-items-top'><BiNote size={25} className='icons'/> Bookings</p></Link>
-            <Link to='/admin/coupons' ><p className='sidebar-items-top'><DiscountIcon size={25} className='icons'/> Coupons</p></Link>
+            <Link to='/admin-dashboard'><p className='flex sidebar-items-top'><AiOutlineHome size={25} className='icons'/> Dashboard</p></Link>
+            <Link to='/admin/resorts' ><p className='flex sidebar-items-top'><HotelIcon size={25} className='icons'/> All Resorts</p></Link>
+            <Link to='/admin/pendings'><p className='flex sidebar-items-top'><BiNote size={25} className='icons'/> Pending</p></Link>
+            <Link to='/admin/manage-staff'><p className='flex sidebar-items-top'><BsPersonFillAdd size={25} className='icons'/>Manage Staffs</p></Link>
+            <Link to='/admin/adventures'><p className='flex sidebar-items-top'><FaHiking size={25} className='icons'/>Adventures</p></Link>
+            <Link to='/admin/destinations' ><p className='flex sidebar-items-top'><FaLocationArrow size={20} className='icons'/> Destinations</p></Link>
+            <Link to='/admin/bookings' ><p className='flex sidebar-items-top'><BiNote size={25} className='icons'/> Bookings</p></Link>
+            <Link to='/admin/coupons' ><p className='flex sidebar-items-top'><DiscountIcon size={25} className='icons'/> Coupons</p></Link>
         </div>
         <div className='top-items'>
-            <p className='sidebar-items' onClick={logout}><SlLogout className='icons'/> Logout</p>
+            <p className='flex sidebar-items' onClick={logout}><SlLogout className='icons'/> Logout</p>
         </div>
     </div>
   )

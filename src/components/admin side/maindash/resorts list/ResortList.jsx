@@ -79,7 +79,7 @@ function ResortList() {
     return (
         <div className="MainDash">
             <Toaster position='top-center' reverseOrder='false' ></Toaster>
-            <h1>Resorts</h1>
+            <h1 className='font-extrabold text-2xl mt-5'>Resorts</h1>
 
             <div className="header">
                 <div className="resort-list-header-left">

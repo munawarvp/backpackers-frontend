@@ -37,73 +37,9 @@ function AdminDashboard() {
 
 
 
-    const [chartData, setChartData] = useState({
-        series: [{
-            data: [21, 22, 10, 28, 16, 21, 13]
-        }],
-        options: {
-            chart: {
-                height: 350,
-                type: 'bar',
-                events: {
-                    click: function (chart, w, e) {
-                        // console.log(chart, w, e)
-                    }
-                }
-            },
-            //   colors: colors,
-            plotOptions: {
-                bar: {
-                    columnWidth: '45%',
-                    distributed: true,
-                }
-            },
-            dataLabels: {
-                enabled: false
-            },
-            legend: {
-                show: false
-            },
-            xaxis: {
-                categories: [
-                    ['Sunday'],
-                    ['Monday'],
-                    ['Tuesday'],
-                    ['Wednesday'],
-                    ['Thursday'],
-                    ['Friday'],
-                    ['Satarday'],
+    
 
-                ],
-                labels: {
-                    style: {
-                        // colors: colors,
-                        fontSize: '12px'
-                    }
-                }
-            }
-        }
-    });
-
-    const [pieChartData, setPieChartData] = useState({
-        series: [44, 55, 41, 17, 15],
-        options: {
-            chart: {
-                type: 'donut',
-            },
-            responsive: [{
-                breakpoint: 480,
-                options: {
-                    chart: {
-                        width: 200
-                    },
-                    legend: {
-                        position: 'bottom'
-                    }
-                }
-            }]
-        }
-    });
+    
     return (
         <div className="admin-dashboard-main-container">
             <div className='admin-dashboard-heading'>
@@ -136,16 +72,6 @@ function AdminDashboard() {
                 </div>
             </div>
 
-            <div className="dashboard-graph-container">
-                <div className="first-graph">
-                    <h3>Weekly Bookings</h3>
-                    <ReactApexChart options={chartData.options} series={chartData.series} type="bar" height={290} />
-                </div>
-                <div className="first-graph">
-                    <h3>Total Applies</h3>
-                    <ReactApexChart options={chartData.options} series={pieChartData.series} type="donut" height={290} />
-                </div>
-            </div>
 
             <div className="dashboard-recent-bookings">
                 <div className='table-div'>

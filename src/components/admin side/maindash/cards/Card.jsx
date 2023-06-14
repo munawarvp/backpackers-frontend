@@ -18,7 +18,7 @@ function Card(props) {
         </div>
         <div className="detail">
             <span>{props.value}</span>
-            <span>{props.title}</span>
+            <h2 className='font-extrabold text-2xl'>{props.title}</h2>
         </div>
     </div>
   )
