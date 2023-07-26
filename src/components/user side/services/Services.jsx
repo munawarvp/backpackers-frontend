@@ -25,15 +25,15 @@ function Services() {
     }, [])
 
     async function getResorts() {
-        const respone = await axios.get(`${BASE_URL}/resorts/homelistresort`)
+        const respone = await axios.get(`${BASE_URL}/resorts/homelistresort/`)
         setResortList(respone.data)
     }
     async function getAdventures() {
-        const respone = await axios.get(`${BASE_URL}/resorts/homelistadventure`)
+        const respone = await axios.get(`${BASE_URL}/resorts/homelistadventure/`)
         setAdventureList(respone.data)
     }
     async function getDestinations() {
-        const respone = await axios.get(`${BASE_URL}/resorts/homelistdestination`)
+        const respone = await axios.get(`${BASE_URL}/resorts/homelistdestination/`)
         setDestinationList(respone.data)
     }
     const data = [
