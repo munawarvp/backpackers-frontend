@@ -51,30 +51,30 @@ function Register() {
       <div className="register-background-contain">
         <img src={Background} alt="" />
       </div>
-      <div className="absolute top-4 left-10 flex flex-col py-8 w-5/6 lg:top-32 lg:left-52 lg:w-3/4 lg:h-auto lg:flex-row items-center bg-white bg-opacity-60 rounded-3xl">
+      <div className="absolute top-4 left-[20px] flex flex-col py-8 w-96 lg:top-32 lg:left-52 lg:w-3/4 lg:h-auto lg:flex-row items-center bg-white bg-opacity-60 rounded-3xl">
         <div className='register-content'>
           <h1 className='font-bold text-3xl mb-1 login-text'>SignUp</h1>
           <p className='w-full'>Please Enter Your SignUp Details</p>
           <form className='register-input' onSubmit={signupSubmit} >
-            <input className='h-10 w-96 text-blue-700 mt-1 bg-transparent border-[3px] border-blue-900 rounded-sm pl-5 outline-none placeholder:text-blue-900' type="text" name='firstname' placeholder='firstname'
+            <input className='h-10 w-80 text-blue-700 mt-1 bg-transparent border-[3px] border-blue-900 rounded-sm pl-5 outline-none placeholder:text-blue-900' type="text" name='firstname' placeholder='firstname'
               onChange={e => setFirstname(e.target.value)}
             />
-            <input className='h-10 w-96 text-blue-700 mt-1 bg-transparent border-[3px] border-blue-900 rounded-sm pl-5 outline-none placeholder:text-blue-900' type="text" name='lastname' placeholder='lastname'
+            <input className='h-10 w-80 text-blue-700 mt-1 bg-transparent border-[3px] border-blue-900 rounded-sm pl-5 outline-none placeholder:text-blue-900' type="text" name='lastname' placeholder='lastname'
               onChange={e => setLastname(e.target.value)}
             />
-            <input className='h-10 w-96 text-blue-700 mt-1 bg-transparent border-[3px] border-blue-900 rounded-sm pl-5 outline-none placeholder:text-blue-900' type="email" name='email' placeholder='email'
+            <input className='h-10 w-80 text-blue-700 mt-1 bg-transparent border-[3px] border-blue-900 rounded-sm pl-5 outline-none placeholder:text-blue-900' type="email" name='email' placeholder='email'
               onChange={e => setEmail(e.target.value)}
             />
-            <input className='h-10 w-96 text-blue-700 mt-1 bg-transparent border-[3px] border-blue-900 rounded-sm pl-5 outline-none placeholder:text-blue-900' type="text" name='phone_number' placeholder='phone'
+            <input className='h-10 w-80 text-blue-700 mt-1 bg-transparent border-[3px] border-blue-900 rounded-sm pl-5 outline-none placeholder:text-blue-900' type="text" name='phone_number' placeholder='phone'
               onChange={e => setPhone(e.target.value)}
             />
-            <input className='h-10 w-96 text-blue-700 mt-1 bg-transparent border-[3px] border-blue-900 rounded-sm pl-5 outline-none placeholder:text-blue-900' type="password" name='password' placeholder='password'
+            <input className='h-10 w-80 text-blue-700 mt-1 bg-transparent border-[3px] border-blue-900 rounded-sm pl-5 outline-none placeholder:text-blue-900' type="password" name='password' placeholder='password'
               onChange={e => setPassword(e.target.value)}
             />
-            <input className='h-10 w-96 text-blue-700 mt-1 bg-transparent border-[3px] border-blue-900 rounded-sm pl-5 outline-none placeholder:text-blue-900' type="password" name='password2' placeholder='confirm password'
+            <input className='h-10 w-80 text-blue-700 mt-1 bg-transparent border-[3px] border-blue-900 rounded-sm pl-5 outline-none placeholder:text-blue-900' type="password" name='password2' placeholder='confirm password'
               onChange={e => setPassword2(e.target.value)}
             />
-            <input className='h-10 w-96 text-blue-950 font-extrabold text-lg border-[3px] border-blue-900 rounded-sm' type="submit" value='SIGNUP' />
+            <input className='h-10 w-80 mt-8 text-blue-950 font-extrabold text-lg border-[3px] border-blue-900 rounded-sm' type="submit" value='SIGNUP' />
             <div className='w-96 font-extrabold'>
               <p className='hidden lg:flex'>Alredy a member..?</p>
               <p><Link className='lo-sign' to='/login'>Login</Link></p>

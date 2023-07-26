@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import Select from 'react-select';
-import { Button } from 'antd';
-import { AiOutlineSearch, AiFillStar } from 'react-icons/ai'
+
+import { AiFillStar } from 'react-icons/ai'
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { BiWifiOff } from 'react-icons/bi'
 import { BsWifi } from 'react-icons/bs'
 import { MdPool } from 'react-icons/md'
 import Point from '../../../images/marker.png'
-import { useDispatch } from 'react-redux';
-import { updateResortId } from '../../../redux/bookingSlice';
+
 
 import ReactMapboxGl, { Marker } from 'react-mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';

@@ -55,7 +55,7 @@ function Login() {
             <div className="login-background-contain">
                 <img src={Background} alt="" />
             </div>
-            <div className='absolute top-16 left-16 flex flex-col w-3/4 p-0 pt-10 pb-10 lg:top-1/4 lg:left-1/4 lg:w-1/2 lg:flex-row h-30 lg:40 items-center bg-white bg-opacity-50 rounded-3xl'>
+            <div className='absolute top-16 left-[20px] flex flex-col w-96 p-0 pt-10 pb-10 lg:top-1/4 lg:left-1/4 lg:w-1/2 lg:flex-row h-30 lg:40 items-center bg-white bg-opacity-50 rounded-3xl'>
                 <img src={Travel} alt="" className="travel-login" />
                 <div className='login-content'>
                     <h1 className='font-bold text-3xl mb-1 login-text'>Login</h1>

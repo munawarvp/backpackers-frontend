@@ -71,63 +71,6 @@ function AddResortForm() {
     console.log(owner);
   }, [])
 
-  // *************************************
-  // formmik code
-  // const formik = useFormik({
-  //   initialValues: {
-  //     resort_name: '',
-  //     place: '',
-  //     location: 1,
-  //     address: '',
-  //     zipcode: '',
-  //     phone_number: '',
-  //     room_type: '',
-  //     price: 0,
-  //     description: '',
-  //     rooms_available: 0,
-  //     wifi_available: false,
-  //     pool_available: false,
-
-  //     image_one: null,
-  //     image_two: null,
-  //     image_three: null,
-  //     image_four: null,
-  //   },
-  //   onSubmit: async (values) => {
-
-  //     const form = new FormData()
-  //     form.append('owner', owner)
-
-  //     for( const key in values){
-  //       form.append(key, values[key])
-  //     }
-
-  //     const res = await axios({
-  //       method: 'post',
-  //       url: `${BASE_URL}/resorts/listresorts/`,
-  //       data: form
-  //     })
-  //     console.log(res,'res');
-
-  // form.append('resort_name',resort_name)
-  // form.append('place',place)
-  // form.append('location',location)
-  // form.append('address',address)
-  // form.append('zipcode',zipcode)
-  // form.append('phone_number',phone_number)
-  // form.append('rooms_available',rooms_available)
-  // form.append('price',price)
-  // form.append('room_type',room_type)
-  // form.append('description',description)
-  // form.append('wifi_available',wifi_available)
-  // form.append('pool_available',pool_available)
-  // form.append('image_one',image_one)
-  // form.append('image_two',image_two)
-  // form.append('image_four',image_three)
-  // form.append('image_four',image_four)
-  //   }
-  // })
-  // ********************************************
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -172,24 +115,24 @@ function AddResortForm() {
   return (
     <div className="MainDash">
       <Toaster position='top-center' reverseOrder='false' ></Toaster>
-      <div className="main-form-container">
-        <h1>Add Your Resort Details</h1>
+      <div className="p-4">
+        <h1 className='text-2xl font-extrabold mt-2'>Add Your Resort Details</h1>
         <div className='form-container'>
 
           <form onSubmit={e => handleSubmit(e)} >
             <div className="two-input-row">
-              <div style={{ display: "flex", flexDirection: "column" }}>
+              <div className='flex flex-col w-96 h-16 mr-4'>
                 <label htmlFor="resort">Resort Name</label>
-                <input type="text" className='input-needed' name='resort_name'
+                <input type="text" className='w-full h-full border-b-[#FF919D] border-b-[3px]' name='resort_name'
                   // onChange={formik.handleChange}
                   // value={formik.values.resort_name}
                   onChange={e => setResort(e.target.value)}
                   required
                 />
               </div>
-              <div style={{ display: "flex", flexDirection: "column" }}>
+              <div className='flex flex-col w-96 h-16 mr-4'>
                 <label htmlFor="location">Place</label>
-                <input type="text" id="location" className='input-needed' name='place'
+                <input type="text" id="location" className='w-full h-full border-b-[#FF919D] border-b-[3px]' name='place'
                   // onChange={formik.handleChange}
                   // value={formik.values.place}
                   onChange={e => setPlace(e.target.value)}
@@ -247,37 +190,9 @@ function AddResortForm() {
             </div>
 
             <div className="two-input-row">
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <label htmlFor="zipcode">Zipcode</label>
-                <input
-                  type="text"
-                  id="zipcode"
-                  name='zipcode'
-                  className='input-needed'
-                  // onChange={formik.handleChange}
-                  // value={formik.values.zipcode}
-                  onChange={e => setZipcode(e.target.value)}
-                  required
-                />
-
-              </div>
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <label htmlFor="roomType">Phone Number</label>
-                <input
-                  type="text"
-                  id="phoneNumber"
-                  name='phone_number'
-                  className='input-needed'
-                  // onChange={formik.handleChange}
-                  // value={formik.values.phone_number}
-                  onChange={e => setPhoneNumber(e.target.value)}
-                  required
-                />
-              </div>
-
-              <div className='text-area-in-row'>
+              <div className='flex flex-col w-96 h-16 mr-4'>
                 <label htmlFor="address">Location</label>
-                <select className='select-field input-needed' name="location" id="location"
+                <select className='w-full h-full border-b-[#FF919D] border-b-[3px]' name="location" id="location"
                   // onChange={formik.handleChange}
                   // value={formik.values.location}
                   onChange={e => setLocation(e.target.value)}
@@ -288,6 +203,49 @@ function AddResortForm() {
                     <option value={item.id}>{item.city_name}</option>
                   ))}
                 </select>
+              </div>
+
+              <div className='flex flex-col w-96 h-16 mr-4'>
+                <label htmlFor="roomType">Price</label>
+                <input
+                  type="number"
+                  id="price"
+                  name='price'
+                  className='w-full h-full border-b-[#FF919D] border-b-[3px]'
+
+                  // onChange={formik.handleChange}
+                  // value={formik.values.price}
+                  onChange={e => setPrice(e.target.value)}
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="two-input-row">
+              <div className='flex flex-col w-96 h-16 mr-4'>
+                <label htmlFor="zipcode">Zipcode</label>
+                <input
+                  type="text"
+                  id="zipcode"
+                  name='zipcode'
+                  className='w-full h-full border-b-[#FF919D] border-b-[3px]'
+                  onChange={e => setZipcode(e.target.value)}
+                  required
+                />
+
+              </div>
+              <div className='flex flex-col w-96 h-16 mr-4'>
+                <label htmlFor="roomType">Phone Number</label>
+                <input
+                  type="text"
+                  id="phoneNumber"
+                  name='phone_number'
+                  className='w-full h-full border-b-[#FF919D] border-b-[3px]'
+                  // onChange={formik.handleChange}
+                  // value={formik.values.phone_number}
+                  onChange={e => setPhoneNumber(e.target.value)}
+                  required
+                />
               </div>
             </div>
 
@@ -308,7 +266,7 @@ function AddResortForm() {
 
               </div>
 
-              <div>
+              <div className='flex flex-col' >
                 <label htmlFor="roomType">Room Type</label>
                 <input
                   type="text"
@@ -318,20 +276,6 @@ function AddResortForm() {
                   // onChange={formik.handleChange}
                   // value={formik.values.room_type}
                   onChange={e => setRoomType(e.target.value)}
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="roomType">Price</label>
-                <input
-                  type="number"
-                  id="price"
-                  name='price'
-                  className='input-needed'
-                  style={{ width: "20rem" }}
-                  // onChange={formik.handleChange}
-                  // value={formik.values.price}
-                  onChange={e => setPrice(e.target.value)}
                   required
                 />
               </div>
@@ -382,6 +326,9 @@ function AddResortForm() {
                 onChange={e => setImageTwo(e.target.files[0])}
                 required
               />
+
+            </div>
+            <div className="flex mt-7">
               <input
                 type="file"
                 id="roomType"
@@ -400,7 +347,7 @@ function AddResortForm() {
               />
             </div>
             <div style={{ display: "flex", justifyContent: "center" }}>
-              <button className='resort-add-btn' type="submit">Submit</button>
+              <button className='bg-rose-400 text-white w-40 p-2 mt-6 text-2xl rounded-md' type="submit">Submit</button>
             </div>
           </form>
         </div>

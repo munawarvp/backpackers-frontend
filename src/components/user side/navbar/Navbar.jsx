@@ -42,16 +42,26 @@ function Navbar() {
                 <img src="" alt="" />
                 Backpackers
             </div>
-            <div className="toggle"></div>
+            <div className="bg-white p-5 absolute right-0 top-0 w-2/4 h-full rounded z-50 lg:hidden">
+              <ul className='flex flex-col gap-8 lg:hidden '>
+                <li><Link className='flex place-items-center gap-2 nav-item' to="/"><MdHomeWork/> <p>Home</p></Link></li>
+                <li><Link className='flex place-items-center gap-2 nav-item' to="/resorts-list"><BsFillBuildingFill/>  Resorts</Link></li>
+                <li><Link className='flex place-items-center gap-2 nav-item' to="/adventure-list"><FaHiking/> Adventures</Link></li>
+                <li><Link className='flex place-items-center gap-2 nav-item' to="/destination-list"><HiLocationMarker/> Destinations</Link></li>
+                {user_auth && <li onClick={userProfile}><Link className='flex place-items-center gap-2 nav-item' ><HiLocationMarker/> Profile</Link></li>}
+                {user_auth ? <li className='flex gap-2' onClick={logout}><UilSignOutAlt/> Logout</li> : <Link to='/login'><button className='login-btn'>Login</button></Link>}
+              </ul>
+              
+            </div>
         </div>
-        <ul>
+        <ul className='hidden lg:flex lg:gap-16 '>
             <li><Link className='hidden lg:flex gap-2 nav-item' to="/"><MdHomeWork/> <p>Home</p></Link></li>
             <li><Link className='hidden lg:flex gap-2 nav-item' to="/resorts-list"><BsFillBuildingFill/>  Resorts</Link></li>
             <li><Link className='hidden lg:flex gap-2 nav-item' to="/adventure-list"><FaHiking/> Adventures</Link></li>
             <li><Link className='hidden lg:flex gap-2 nav-item' to="/destination-list"><HiLocationMarker/> Destinations</Link></li>
         </ul>
         { user_auth && user_name.is_staff ? <Link to='/admin-dashboard'><button className='login-btn'>Admin</button></Link> : null}
-        {user_auth ? <div className='nav-right-group'><div onClick={userProfile} style={{display:"flex", alignItems:"center", gap:"5px"}}><HiUserCircle size={37}/><h3 className='hidden lg:flex'>{user_name.username}</h3></div>  <UilSignOutAlt className='hidden lg:flex' onClick={logout} /> <FiMenu size={25} className='mr-2 lg:hidden'/></div> : <Link to='/login'><button className='login-btn'>Login</button></Link>}
+        {user_auth ? <div className='nav-right-group'><div className='mr-2' onClick={userProfile} style={{display:"flex", alignItems:"center"}}><HiUserCircle size={37}/><h3 className='hidden lg:flex'>{user_name.username}</h3></div>  <UilSignOutAlt className='hidden lg:flex' onClick={logout} /> <FiMenu size={25} className='mr-2 lg:hidden'/></div> : <Link to='/login'><button className='login-btn'>Login</button></Link>}
         
         
     </div>

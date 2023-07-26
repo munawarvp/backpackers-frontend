@@ -22,12 +22,7 @@
 .toggle{
     display: none;
 }
-.header-navbar>ul{
-    padding-left: 0;
-    display: flex;
-    gap: 4rem;
-    list-style-type: none;
-}
+
 .nav-item{
     text-decoration: none;
     color: #023e8a;
